@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Конференции JUG.RU</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__logo">
+            <img src="./src/img/jug_logo 2.png" alt="JUG.RU logo">
+        </a>
+        <h1 class="header__slogan">Конференции,<br>которые нужны</h1>
+        <div class="header__about">
+            <p>
+                Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.
+            </p>
+            <p>
+                С нас — крутая программа, топовые спикеры, технические доклады без воды.
+            </p>
+            <p>
+                С вас — готовность смотреть и общаться.
+            </p>
+        </div>
+        <div class="header__stripes">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="./src/img/jrg_live_background.png" alt="backgfound" class="header__bg">
+        <div class="header__btns">
+            <div class="header__buy">
+                <button class="header__btn">Купить билет</button>
+                <img src="./src/img/hand_up.png" alt="hand-up emoji" class="header__emoji">
+            </div>
+            <div class="header__gotohell">
+                <button class="header__btn">Послать в жопу</button>
+                <img src="./src/img/face_palm.png" alt="face_palm emoji" class="header__emoji">
+            </div>
+        </div>
+
+        <div class="header__popup popup popup--hide">
+            <div class="popup__sub">
+                <div class="popup__sub_header">
+                    <img src="./src/img/hand_up.png" alt="hand-up emoji">
+                    <h2>Я хочу знать, когда<br>будет офлайн</h2>
+                </div>
+                <form class="popup__sub_form" name="subscribe">
+                    <input class="popup__sub_input" type="email" name="email" placeholder="Укажите email">
+                    <input class="popup__sub_btn" type="submit" name="submit" value="Подписаться">
+                </form>
+                <div class="popup__sub_message hidden">
+                    <p>Спасибо, что подписались на нашу рассылку!</p>
+                </div>
+                <p class="popup__sub_personal">Нажимая на кнопку вы соглашаетесь<br>а обработку <a href="#">персональных данных</a></p>
+            </div>
+            <div class="popup__question">
+                    <div class="popup__question_header">
+                        <img src="./src/img/face_palm.png" alt="face_palm emoji">
+                        <h2>Идите в жопу!</h2>
+                    </div>
+                    <div class="popup__question_btns">
+                        <button class="popup__question_btn">Вы свои цены видели?</button>
+                        <button class="popup__question_btn">Доклады ни о чем</button>
+                        <button class="popup__question_btn">У вас там всё хорошо?</button>
+                        <button class="popup__question_btn">Денег нет, но вы держитесь</button>
+                    </div>
+                    <div class="popup__question_message hidden">
+                        <img src="./src/img/good.png" alt="good emoji">
+                        <p>Спасибо, что поделились!</p>
+                    </div>
+            </div>
+            <div class="popup__back_btn">
+                <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.3335 37L3.00016 19.5L21.3335 2" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <a>Я кликнул просто посмотреть</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Разметка следующих экранов -->
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

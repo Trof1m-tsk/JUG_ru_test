@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    width: auto;
+    max-width: 1400px;
+    padding: 0 80px;
+}
+
+.header {
+    position: relative;
+    padding-top: 150px;
+    overflow: hidden;
+}
+.header__slogan {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 55px;
+}
+
+.header__about {
+    margin: 20px 0 100px;
+    width: 505px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.header__about p {
+    margin-bottom: 1rem;
+}
+
+.header__logo {
+    height: 41px;
+    width: 126px;
+}
+
+.header__bg {
+    position: absolute;
+    width: 50%;
+    top: 187px;
+    right: 0;
+}
+
+.header__stripes {
+    /* background-color: #ccc; */
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 60%;
+    height: 100%;
+    transform: rotate(30deg);
+    overflow: hidden;
+}
+
+@keyframes moving-stripes {
+    0% {
+        margin-top: 8%;
+    }
+    100% {
+        margin-top: -8%;
+    }
+}
+
+.header__stripes span {
+    background: #000;
+    display: block;
+    height: 10%;
+    margin-top: 8%;
+}
+
+.header__stripes span:first-child {
+    margin-top: 5%;
+    animation-name: moving-stripes;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.header__btns {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header__buy,
+.header__gotohell {
+    position: relative;
+}
+
+.header__btn {
+    width: 210px;
+    height: 65px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__buy .header__btn {
+    background-color: #FBCB03;
+    color: #000;
+    margin-right: 20px;
+}
+
+.header__buy .header__btn:active {
+    background-color: #E6B901;
+}
+
+.header__gotohell .header__btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.header__gotohell .header__btn:active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header__emoji {
+    position: absolute;
+}
+
+.header__buy .header__emoji {
+    left: 79px;
+    top: -52px;
+}
+
+.header__gotohell .header__emoji {
+    left: 83px;
+    top: -44px;
+}
+
+.popup {
+    display: grid;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    grid-template-areas: 
+        'subscribe question'
+        'back back';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    background: #fff;
+    width: 100%;
+    /* height: 100vh; */
+    padding: 85px 0 105px;
+    transition: all 0.5s ease;
+}
+
+.popup--hide {
+    top: -200%;
+}
+
+.popup__sub,
+.popup__question {
+    max-width: 610px;
+    min-height: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 50px 25px 40px;
+}
+
+.popup__sub {
+    grid-area: subscribe;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.popup__sub_header,
+.popup__question_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.popup__sub_header h2,
+.popup__question_header h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.popup__sub_header img,
+.popup__question_header img {
+    margin-right: 20px;
+}
+
+.popup__sub_form {
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.popup__sub_btn {
+    width: 161px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 11px;
+    outline: none;
+    cursor: pointer;
+}
+
+.popup__sub_btn:active {
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.popup__sub_input {
+    display: block;
+    margin-right: 10px;
+    flex-grow: 1;
+    border: none;
+    border-radius: 11px;
+    background-color: #f8f8f8;
+    padding-left: 28px;
+    outline: none;
+}
+
+.popup__sub_input::placeholder {
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.popup__sub_personal {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.popup__sub_personal a {
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.popup__sub_message {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__sub_message p {
+    font-size: 14px;
+}
+
+.popup__question {
+    position: relative;
+    grid-area: question;
+    background-color: #000;
+    color: #fff;
+}
+
+.popup__question_btns {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 55px 10px;
+}
+
+.popup__question_btn {
+    width: auto;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.popup__question_btn:active {
+    background-color: #fff;
+    color: #000;
+}
+
+.popup__question_message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__question_message p {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.popup__back_btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 0;
+}
+
+.popup__back_btn a {
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
