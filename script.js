@@ -38,10 +38,13 @@ const hideSubscribeMessage = () => {
     popupSubscribeMessage.classList.add('hidden');
 }
 
+const setHidePopupTimeout = () => {
+    setTimeout(hidePopup, 1000);
+}
+
 const clickSubscribe = (evt) => {
     evt.preventDefault();
     showSubscribeMessage();
-    setTimeout(hidePopup, 700);
 }
 
 const showPopup = () => {
@@ -51,13 +54,13 @@ const showPopup = () => {
         clickSubscribe(evt);
         popupSubscribeForm.classList.add('hidden');
         popupSubscribePersonal.classList.add('hidden');
-
+        setHidePopupTimeout();
     });
-
+    
     popupQuestionBtns.forEach( btn => {
         btn.addEventListener('click', () => {
             popupQuestionMessage.classList.remove('hidden');
-            setTimeout(hidePopup, 700);
+            setHidePopupTimeout();
         });
     });
 
